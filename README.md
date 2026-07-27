@@ -127,8 +127,7 @@
 
 ## 👨‍💻 Author
 
-**Mallampally Jayantha Siva Srinivas** |
-Electronics and Communication Engineering (ECE)
+**Mallampally Jayantha Siva Srinivas** | **Electronics and Communication Engineering (ECE)**
 
-Embedded Systems | IoT | Arduino | VLSI | AI Enthusiast
+*Embedded Systems | IoT | Arduino | VLSI | AI Enthusiast*
 ---

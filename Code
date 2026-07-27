@@ -1,0 +1,52 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int pirPin = 3;
+const int ledPin = 2;
+bool lastMotionState = -1; // forces first update to always print
+void setup()
+{
+  pinMode(pirPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0, 0);
+  lcd.print("System Ready....");
+  delay(1000);
+  lcd.clear();
+}
+void loop()
+{
+  int motion = digitalRead(pirPin);
+  if (motion == HIGH)
+  {
+    digitalWrite(ledPin, HIGH);
+    if (motion != lastMotionState)
+    {
+      Serial.println("MOTION DETECTED");
+      Serial.println("LIGHT STATUS : ON");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Motion DET: YES");
+      lcd.setCursor(0, 1);
+      lcd.print("Light ST: ON");
+    }
+  }
+  else
+  {
+    digitalWrite(ledPin, LOW);
+    if (motion != lastMotionState)
+    {
+      Serial.println("MOTION NOT DETECTED");
+      Serial.println("LIGHT STATUS : OFF");
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Motion DET: NO");
+      lcd.setCursor(0, 1);
+      lcd.print("Light ST: OFF");
+    }
+  }
+  lastMotionState = motion;
+  delay(100);
+}

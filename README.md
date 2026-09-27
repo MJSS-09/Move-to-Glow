@@ -127,7 +127,6 @@
 
 ## 👨‍💻 Author
 
-**Mallampally Jayantha Siva Srinivas** | **Electronics and Communication Engineering (ECE)**
-
-*Embedded Systems | IoT | Arduino | VLSI | AI Enthusiast*
+**Mallampally Jayantha Siva Srinivas** | **B.Tech | Electronics and Communication Engineering (ECE)**
+ESSCI-Certified Embedded Fullstack & IoT Analyst , SRM University(AP)
 ---
